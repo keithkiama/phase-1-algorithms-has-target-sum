@@ -1,17 +1,29 @@
 function hasTargetSum(array, target) {
   // Write your algorithm here
+  const numbersArray = [];
+    for (const number of array){
+      const result = target - number;
+    if (result in numbersArray)
+        return true;
+        numbersArray[number] = true;
+    }
+      return false;
 }
+
 
 /* 
   Write the Big O time complexity of your function here
+  Θ(n)
 */
 
 /* 
   Add your pseudocode here
+
 */
 
 /*
   Add written explanation of your solution here
+  This code selects an array of numbers and matches it to whether it is true or false
 */
 
 // You can run `node index.js` to view these console logs
